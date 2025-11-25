@@ -1,0 +1,11 @@
+C:\Users\femlf\source\repos\CRR\CRR\bin\Debug\net8.0\CRR_Model.deps.json
+C:\Users\femlf\source\repos\CRR\CRR\bin\Debug\net8.0\CRR_Model.dll
+C:\Users\femlf\source\repos\CRR\CRR\bin\Debug\net8.0\CRR_Model.pdb
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.AssemblyInfoInputs.cache
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.AssemblyInfo.cs
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.csproj.CoreCompileInputs.cache
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.dll
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\refint\CRR_Model.dll
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.pdb
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\ref\CRR_Model.dll
