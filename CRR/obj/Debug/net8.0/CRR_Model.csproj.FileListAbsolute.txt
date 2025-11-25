@@ -9,3 +9,4 @@ C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.dll
 C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\refint\CRR_Model.dll
 C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.pdb
 C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\ref\CRR_Model.dll
+C:\Users\femlf\source\repos\CRR\CRR\obj\Debug\net8.0\CRR_Model.sourcelink.json

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CRR_Model": {
+      "commandName": "Project"
+    },
+    "Профиль 1": {
+      "commandName": "Project"
+    }
+  }
+}
