@@ -16,19 +16,15 @@ namespace CRR_Model.Classes
 
         internal static (double t, double u, double d, double p) CalculateParameters(Option option)
         {
-            //validation
             if (option.S <= 0 || option.K <= 0 || option.Steps == 0 || option.Sigma <= 0)
                 throw new ArgumentException("Invalid parameters");
 
-            //calculating the expiration time expressed in years and finding the step length
             double days = (option.Expiry - DateTime.Now).TotalDays;
             double t = days / 365 / option.Steps;
 
-            //calculating the growth and fall coefficient
             double u = Math.Exp(option.Sigma * Math.Sqrt(t));
             double d = 1 / u;
 
-            //calculating the risk-neutral probability of a stock rising and falling
             double futureValueFactor = Math.Exp((option.R - option.Q) * t);
             double p = (futureValueFactor - d) / (u - d);
 
@@ -37,7 +33,6 @@ namespace CRR_Model.Classes
         }
 
 
-        //верхние значения ОПЦИОНОВ
         internal static double[] CalculateFinalPriceForOptions(double[] activesPrices, double K, bool isCall)
         {
             double[] optionHighPrices = new double[activesPrices.Length];
@@ -63,7 +58,6 @@ namespace CRR_Model.Classes
             return optionHighPrices;
         }
 
-        //Верхние значения АКТИВОВ
         internal static double[] GetStockPricesForStep(uint step, double u, double d, double S)
         {
             double[] prices = new double[step + 1];

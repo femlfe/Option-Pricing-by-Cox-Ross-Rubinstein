@@ -45,9 +45,16 @@ namespace CRR_Model.Classes
             return Option.GetFinalOptionAmerican(highOptions, p, option.R, t, option.K, u, d, stockPrices, false)[0];
         }
 
-        public static double Delta(Option option, bool isCall, bool isEuropian)
+        public static (double delta, double gamma, double theta, double vega, double rho) GetGreeks(Option option,bool isCall, bool isEuropian)
         {
-            return GreekOption.GetDelta(option, isCall, isEuropian);
+            double delta = GreekOption.GetDelta(option, isCall, isEuropian);
+            double gamma = GreekOption.GetGamma(option, isEuropian);
+            double theta = GreekOption.GetTheta(option, isCall, isEuropian);
+            double vega = GreekOption.GetVega(option, isEuropian);
+            double rho = GreekOption.GetRho(option, isCall, isEuropian);
+
+            return (delta, gamma, theta, vega, rho);
         }
+
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRR_Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9aa051d67721ffd9509a3420dfa0b12c7ff496c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bc5e9788b4c02f99fdaf4c06245d72e3c3aed6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRR_Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRR_Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
