@@ -1,4 +1,3 @@
 <Solution>
   <Project Path="CRR/CRR_Model.csproj" />
-  <Project Path="TestConsoleApp/TestConsoleApp.csproj" Id="d4a06905-dc7b-4d3b-9166-7a376e7094bd" />
 </Solution>

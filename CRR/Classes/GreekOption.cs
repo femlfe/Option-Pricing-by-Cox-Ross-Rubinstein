@@ -3,104 +3,57 @@ namespace CRR_Model.Classes
 {
     internal static class GreekOption
     {
-        internal static double GetDelta(Option option, bool isCall, bool isEuropean) 
+        //Получение дельты опциона
+        // В методе GetDelta добавьте отладочный вывод:
+        internal static double GetDelta(Option option, bool isCall, bool isEuropean)
         {
-            var (t, u, d, p) = Option.CalculateParameters(option);
 
-            double[] stockPrices = Option.GetStockPricesForStep(1, u, d, option.S);
-            double S_up = stockPrices[0];
-            double S_down = stockPrices[1];
+            double h = option.S * 0.001;
+            double S_up = option.S + h;
+            double S_down = option.S - h;
 
-            Option optionUp = new Option
-            {
-                S = S_up,
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma,
-                R = option.R,
-                Steps = option.Steps,
-                Q = option.Q
-            };
-
-            Option optionDown = new Option
-            {
-                S = S_down,
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma,
-                R = option.R,
-                Steps = option.Steps,
-                Q = option.Q
-            };
+            Option optionUp = new Option(S_up, option.K, option.Expiry, option.Sigma*100, option.R * 100, option.Q * 100, option.Steps);
+            Option optionDown = new Option(S_down, option.K, option.Expiry, option.Sigma * 100, option.R * 100, option.Q * 100, option.Steps);
 
             double priceUp = GetOptionPrice(optionUp, isCall, isEuropean);
             double priceDown = GetOptionPrice(optionDown, isCall, isEuropean);
 
-            return (priceUp - priceDown) / (S_up - S_down);
+            return (priceUp - priceDown) / (2 * h);
         }
 
-
-        internal static double GetGamma(Option option, bool isEuropean)
+        //Получение гаммы опциона
+        internal static double GetGamma(Option option,bool isCall, bool isEuropean)
         {
+            //Изменение цены актива на 1%
             double upDown = option.S * 0.01;
             double S_up = option.S + upDown;
             double S_down = option.S - upDown;
 
-            Option optionUp = new Option
-            {
-                S = S_up,  
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma,
-                R = option.R,
-                Steps = option.Steps,
-                Q = option.Q
-            };
+            // Опцион с увеличенной ценой актива
+            Option optionUp = new Option(S_up, option.K, option.Expiry, option.Sigma * 100, option.R * 100, option.Q * 100, option.Steps);
 
-            Option optionDown = new Option
-            {
-                S = S_down, 
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma,
-                R = option.R,
-                Steps = option.Steps,
-                Q = option.Q
-            };
 
-            double priceUp = GetDelta(optionUp, true, isEuropean);
-            double priceDown = GetDelta(optionDown, true, isEuropean);
+            // Опцион с уменьшенной волатильностью
+            Option optionDown = new Option(S_down, option.K, option.Expiry, option.Sigma * 100, option.R * 100, option.Q * 100, option.Steps);
+
+
+            double priceUp = GetDelta(optionUp, isCall, isEuropean);
+            double priceDown = GetDelta(optionDown, isCall, isEuropean);
 
             return (priceUp - priceDown) / (2* upDown);
         }
 
+        //Получение веги опциона
         internal static double GetVega(Option option, bool isEuropean)
         {
-            double dSigma = 0.01; // Изменение волатильности на 1%
+            // Изменение волатильности на 1%
+            double dSigma = 0.01; 
 
             // Опцион с увеличенной волатильностью
-            Option optionVolUp = new Option
-            {
-                S = option.S,
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma + dSigma,  
-                R = option.R,
-                Steps = option.Steps,
-                Q = option.Q
-            };
+            Option optionVolUp = new Option(option.S, option.K, option.Expiry, (option.Sigma + dSigma) * 100, option.R * 100, option.Q * 100, option.Steps);
 
             // Опцион с уменьшенной волатильностью
-            Option optionVolDown = new Option
-            {
-                S = option.S,
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma - dSigma,
-                R = option.R,
-                Steps = option.Steps,
-                Q = option.Q
-            };
+            Option optionVolDown = new Option(option.S, option.K, option.Expiry, (option.Sigma - dSigma) * 100, option.R * 100, option.Q * 100, option.Steps);
 
             double priceUp = GetOptionPrice(optionVolUp, true, isEuropean);
             double priceDown = GetOptionPrice(optionVolDown, true, isEuropean);
@@ -108,53 +61,33 @@ namespace CRR_Model.Classes
             return (priceUp - priceDown) / (2 * dSigma);
         }
 
+        //Получение тетты опциона
         internal static double GetTheta(Option option, bool isCall, bool isEuropean)
         {
+            //Величина изменения даты экспирации - 1 день
             double days = 1;
-            Option optionTimeDown = new Option
-            {
-                S = option.S,
-                K = option.K,
-                Expiry = option.Expiry.AddDays(-days),
-                Sigma = option.Sigma,
-                R = option.R,
-                Steps = option.Steps,
-                Q = option.Q
-            };
+
+            //Опцион с измененной датой экспирации
+            Option optionTimeDown = new Option(option.S, option.K, option.Expiry.AddDays(-days), option.Sigma * 100, option.R * 100, option.Q * 100, option.Steps);
 
             double priceToday = GetOptionPrice(option, isCall, isEuropean);
             double priceTomorrow = GetOptionPrice(optionTimeDown, isCall, isEuropean);
 
+            //Годовое значение тетты
             return (priceTomorrow - priceToday)*365;
         }
 
+        //Получение грека ро
         internal static double GetRho(Option option, bool isCall, bool isEuropean)
         {
-            double dR = 0.01; // Изменение ставки на 1% (0.01)
+            // Изменение ставки на 1%
+            double dR = 0.01; 
 
             // Опцион с увеличенной ставкой
-            Option optionRateUp = new Option
-            {
-                S = option.S,
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma,
-                R = option.R + dR,  // r + 1%
-                Steps = option.Steps,
-                Q = option.Q
-            };
+            Option optionRateUp = new Option(option.S, option.K, option.Expiry, option.Sigma * 100, (option.R + dR) * 100, option.Q * 100, option.Steps);
 
             // Опцион с уменьшенной ставкой
-            Option optionRateDown = new Option
-            {
-                S = option.S,
-                K = option.K,
-                Expiry = option.Expiry,
-                Sigma = option.Sigma,
-                R = option.R - dR,  // r - 1%
-                Steps = option.Steps,
-                Q = option.Q
-            };
+            Option optionRateDown = new Option(option.S, option.K, option.Expiry, option.Sigma * 100, (option.R - dR) * 100, option.Q * 100, option.Steps);
 
             double priceUp = GetOptionPrice(optionRateUp, isCall, isEuropean);
             double priceDown = GetOptionPrice(optionRateDown, isCall, isEuropean);
@@ -162,6 +95,7 @@ namespace CRR_Model.Classes
             return (priceUp - priceDown) / (2 * dR);
         }
 
+        //Вспомогательный метод для получения цены опциона любого типа
         private static double GetOptionPrice(Option option, bool isCall, bool isEuropean)
         {
             if (isCall && isEuropean)

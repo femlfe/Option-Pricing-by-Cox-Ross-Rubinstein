@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|c:\\users\\femlf\\source\\repos\\crr\\crr\\classes\\crr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|solutionrelative:crr\\classes\\crr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4A06905-DC7B-4D3B-9166-7A376E7094BD}|TestConsoleApp\\TestConsoleApp.csproj|c:\\users\\femlf\\source\\repos\\crr\\testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4A06905-DC7B-4D3B-9166-7A376E7094BD}|TestConsoleApp\\TestConsoleApp.csproj|solutionrelative:testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +32,7 @@
               "RelativeDocumentMoniker": "CRR\\Classes\\Option.cs",
               "ToolTip": "C:\\Users\\femlf\\source\\repos\\CRR\\CRR\\Classes\\Option.cs",
               "RelativeToolTip": "CRR\\Classes\\Option.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAADwv2oAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T15:06:28.255Z",
               "EditorCaption": ""
@@ -49,22 +45,9 @@
               "RelativeDocumentMoniker": "CRR\\Classes\\GreekOption.cs",
               "ToolTip": "C:\\Users\\femlf\\source\\repos\\CRR\\CRR\\Classes\\GreekOption.cs",
               "RelativeToolTip": "CRR\\Classes\\GreekOption.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAIwKoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T13:55:30.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\femlf\\source\\repos\\CRR\\TestConsoleApp\\Program.cs",
-              "RelativeDocumentMoniker": "TestConsoleApp\\Program.cs",
-              "ToolTip": "C:\\Users\\femlf\\source\\repos\\CRR\\TestConsoleApp\\Program.cs",
-              "RelativeToolTip": "TestConsoleApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T09:08:40.331Z",
               "EditorCaption": ""
             },
             {
@@ -75,7 +58,7 @@
               "RelativeDocumentMoniker": "CRR\\Classes\\CRR.cs",
               "ToolTip": "C:\\Users\\femlf\\source\\repos\\CRR\\CRR\\Classes\\CRR.cs",
               "RelativeToolTip": "CRR\\Classes\\CRR.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAUwDwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDMAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T09:20:45.936Z",
               "EditorCaption": ""
