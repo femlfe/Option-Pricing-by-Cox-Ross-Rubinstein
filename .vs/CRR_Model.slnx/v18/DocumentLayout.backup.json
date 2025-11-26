@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\femlf\\source\\repos\\CRR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4A06905-DC7B-4D3B-9166-7A376E7094BD}|TestConsoleApp\\TestConsoleApp.csproj|c:\\users\\femlf\\source\\repos\\crr\\testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4A06905-DC7B-4D3B-9166-7A376E7094BD}|TestConsoleApp\\TestConsoleApp.csproj|solutionrelative:testconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|c:\\users\\femlf\\source\\repos\\crr\\crr\\classes\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|solutionrelative:crr\\classes\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|c:\\users\\femlf\\source\\repos\\crr\\crr\\classes\\greekoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|solutionrelative:crr\\classes\\greekoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|c:\\users\\femlf\\source\\repos\\crr\\crr\\classes\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|solutionrelative:crr\\classes\\option.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{824C374A-1756-D5D0-2CD5-DC3663BC55B5}|CRR\\CRR_Model.csproj|c:\\users\\femlf\\source\\repos\\crr\\crr\\classes\\crr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Option.cs",
               "DocumentMoniker": "C:\\Users\\femlf\\source\\repos\\CRR\\CRR\\Classes\\Option.cs",
               "RelativeDocumentMoniker": "CRR\\Classes\\Option.cs",
               "ToolTip": "C:\\Users\\femlf\\source\\repos\\CRR\\CRR\\Classes\\Option.cs",
               "RelativeToolTip": "CRR\\Classes\\Option.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAtwCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T15:06:28.255Z",
               "EditorCaption": ""
@@ -56,20 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\femlf\\source\\repos\\CRR\\TestConsoleApp\\Program.cs",
-              "RelativeDocumentMoniker": "TestConsoleApp\\Program.cs",
-              "ToolTip": "C:\\Users\\femlf\\source\\repos\\CRR\\TestConsoleApp\\Program.cs*",
-              "RelativeToolTip": "TestConsoleApp\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T09:08:40.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CRR.cs",
               "DocumentMoniker": "C:\\Users\\femlf\\source\\repos\\CRR\\CRR\\Classes\\CRR.cs",
               "RelativeDocumentMoniker": "CRR\\Classes\\CRR.cs",

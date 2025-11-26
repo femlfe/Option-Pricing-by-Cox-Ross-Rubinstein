@@ -4,7 +4,6 @@ namespace CRR_Model.Classes
     internal static class GreekOption
     {
         //Получение дельты опциона
-        // В методе GetDelta добавьте отладочный вывод:
         internal static double GetDelta(Option option, bool isCall, bool isEuropean)
         {
 
